@@ -14,6 +14,9 @@ body {
   color:$--text-color;  
 }
 .App {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
   height: 100vH;
   background-color: $--backgroun-color;
   color: $--text-color;

@@ -11,7 +11,7 @@ const Main = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (
@@ -23,13 +23,7 @@ const Main = () => {
         <div className={style.container}>
           <div className={style.spinner}></div>
         </div>
-        {/* 
-        <div className={style.container}>
-          <div className={style.spinner}></div>
-        </div>
-        <div className={style.container}>
-          <div className={style.spinner}></div>
-        </div> */}
+
       </div>
       ) : (
         <Routes>

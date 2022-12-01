@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.scss';
 import Header from './components/Header/Header.js'
 import Main from './components/Main/Main';

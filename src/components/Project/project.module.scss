@@ -1,9 +1,14 @@
 @import "../../assets/scss/variables.scss";
 
 .project {
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
     height: 75vh;
     scroll-behavior: smooth;
+
+    @media (500px > width) { 
+        height: 90vh;
+        scroll-behavior: smooth;
+       }
 
     &>p.desc {
         white-space: pre-line;
@@ -15,6 +20,9 @@
         position: relative;
         isolation: isolate;
         margin: 1rem 0 5rem;
+        @media (500px > width) { 
+            margin: 1rem 0 1rem;
+           }
 
         img {
             margin-inline: auto;
@@ -22,9 +30,13 @@
             @include transition300;
             z-index: 1;
             transform-origin: top;
+            @media (500px > width) { 
+                width: min(100%, 400px - 10px);
+               }
         }
 
         h2 {
+
             position: absolute;
             top: 40px;
             left: 0;
@@ -33,6 +45,9 @@
             padding: 1rem;
             @include transition300;
             z-index: 10;
+            @media (500px > width) { 
+                top: -60px;
+               }
         }
 
         &:hover {
@@ -40,10 +55,18 @@
                 rotate: -90deg;
                 top: 120px;
                 left: -80px;
+                @media (500px > width) { 
+                    rotate: 0deg;
+                    top: -60px;
+                    left: 0;
+                   }
             }
 
             img {
                 scale: 1.2;
+                @media (500px > width) { 
+                    scale: 1;
+                   }
             }
         }
     }

@@ -4,6 +4,7 @@ import Aos from "aos"
 import 'aos/dist/aos.css'
 import style from './home.module.scss'
 import Arrow from '../Icons/Arrow'
+import photo_hero from '../../assets/media/photo_hero.png'
 const Home = () => {
 
     useEffect(() => {
@@ -38,7 +39,9 @@ const Home = () => {
                         data-aos-easing="ease-in-sine"
                     >but you can call me "Jeka" <span className={style.blinks}>|</span></h3>
                 </div>
-                <img src="https://user-images.githubusercontent.com/55212034/204159894-25762574-0bdd-4088-8ffe-0c49682e037b.png" width="200" alt="Yevheniy Alekseyev Fullstack Developer" />
+                <div className={style.photo_hero}>
+                    <img src={photo_hero} width="200" alt="Yevheniy Alekseyev Fullstack Developer" />
+                </div>
             </div>
             <div className={style.hero_links}>
                 <ul>
@@ -50,7 +53,7 @@ const Home = () => {
                         data-aos-easing="ease"
                     ><Arrow stroke={"#ca2f00"} />about me</Link></li>
                     <li><span>| |</span></li>
-                    <li><Link to="./projects"
+                    <li><Link to="./works"
                         data-aos="fade-right"
                         data-aos-offset="300"
                         data-aos-duration="1200"

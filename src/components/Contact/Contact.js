@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Aos from "aos"
 import 'aos/dist/aos.css'
 import ContactForm from "../ContactForm/ContactForm"
@@ -15,7 +14,7 @@ const Contact = () => {
     return (
 
         <div
-            className={style.wrapper}
+            className={style.conact_wrapper}
             data-aos="zoom-in"
             data-aos-offset="100"
             data-aos-duration="200"

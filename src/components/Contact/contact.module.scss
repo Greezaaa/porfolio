@@ -1,7 +1,7 @@
 @import "../../assets/scss/variables.scss";
 
 
-.wrapper {
+.conact_wrapper {
     width: min(100% - calc(4 * $--1fr-padding), 1024px);
     margin-inline: auto;
     display: grid;
@@ -10,8 +10,11 @@
     gap: 100px;
     align-items: end;
     @media (500px > width) {
+        height: 90%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+        gap: 0;
+        align-items: center;
     }
     .content {
 
