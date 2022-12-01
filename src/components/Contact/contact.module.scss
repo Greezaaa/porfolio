@@ -9,6 +9,11 @@
     grid-template-rows: 6fr 2fr;
     gap: 100px;
     align-items: end;
+    @media (width < 768px) {
+       
+        gap: 20px;
+        
+    }
     @media (500px > width) {
         height: 90%;
         grid-template-columns: 1fr;

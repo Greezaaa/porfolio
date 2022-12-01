@@ -1,6 +1,6 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Aos from "aos"
 import 'aos/dist/aos.css'
 import style from './header.module.scss'
@@ -11,7 +11,11 @@ import EmailIcon from '../Icons/EmailIcon';
 
 
 const Header = () => {
-
+    const [IsOpen, setIsOpen] = useState(false)
+    const openMenu = () => {
+        setIsOpen(!IsOpen)
+        
+    }
     useEffect(()=> {
         Aos.init({duration: 2000})
     },[])
@@ -19,6 +23,7 @@ const Header = () => {
 
     return (
         <header className={style.header}>
+            <div className={`${style.hamburger} ${ IsOpen ? style.open : ""}`} onClick={()=>openMenu()} ><span></span><span></span><span></span></div>
             <div className={style.logo}>
                 <Logo />
             </div>
