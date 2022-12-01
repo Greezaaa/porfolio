@@ -36,7 +36,7 @@ const Header = () => {
                     data-aos-duration="1000"
                     data-aos-easing="ease">home</Link>
                 <Link
-                    to="/projects"
+                    to="/works"
                     className={`${style.link} `}
                     data-aos="fade-down"
                     data-aos-offset="500"
