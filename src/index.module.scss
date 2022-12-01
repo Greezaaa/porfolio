@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "NAMU-Pro";
+  src: local("NAMU-Pro"), url("./assets/Font/NAMU-Pro.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "NAMU1990";
+  src: local("NAMU1990"),url("./assets/Font/NAMU-1990.woff2") format(woff2);
+}
+@font-face {
+  font-family: "NAMU1400";
+  src: local("NAMU1400"),url("./assets/Font/NAMU-1600.woff2") format(woff2);
+}
+@import "./assets/scss/variables.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+

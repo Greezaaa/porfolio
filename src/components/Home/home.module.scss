@@ -1,0 +1,87 @@
+@import "../../assets/scss/variables.scss";
+
+.hero_wrapper {
+
+    display: grid;
+    grid-template-rows: 4fr 3fr;
+
+    .blinks {
+
+        @include blink_animation;
+        color: $--accentColor;
+        text-transform: lowercase;
+    }
+
+    .npm {
+        color: $--accentColor;
+        text-transform: lowercase;
+        font-size: 50%;
+    }
+
+    .hero_content {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 5fr 3fr;
+        align-items: end;
+        justify-content: center;
+
+        .hero_main {
+            align-self: end;
+            justify-self: end;
+
+            h2 {
+                font-size: 40px;
+                font-family: "NAMU1400";
+                font-weight: 900;
+                text-align: right;
+                margin: .5rem 0;
+            }
+        }
+    }
+
+    .hero_links {
+        width: 400px;
+        margin-inline: auto;
+
+        &>ul {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            list-style: none;
+            &>li {
+                &>a {
+                    display: flex;
+                    gap: 10px;
+                }
+                &:nth-child(1) {
+                    svg {
+                        rotate: -90deg;
+                        @include transition300;
+                    }
+                    &:hover {
+                        svg {
+                            rotate: -45deg
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    svg {
+                        rotate: 0;
+                        @include transition300;
+                    }
+                    &:hover {
+                        svg {
+                            rotate: -45deg
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.hightlight {
+    color: $--accentColor;
+}

@@ -1,0 +1,50 @@
+@import "../../assets/scss/variables.scss";
+
+.project {
+    scroll-snap-align: start;
+    height: 75vh;
+    scroll-behavior: smooth;
+
+    &>p.desc {
+        white-space: pre-line;
+    }
+
+    &>.project_header {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        isolation: isolate;
+        margin: 1rem 0 5rem;
+
+        img {
+            margin-inline: auto;
+            scale: 1;
+            @include transition300;
+            z-index: 1;
+            transform-origin: top;
+        }
+
+        h2 {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            height: 60px;
+            background-color: $--accentColor;
+            padding: 1rem;
+            @include transition300;
+            z-index: 10;
+        }
+
+        &:hover {
+            h2 {
+                rotate: -90deg;
+                top: 120px;
+                left: -80px;
+            }
+
+            img {
+                scale: 1.2;
+            }
+        }
+    }
+}

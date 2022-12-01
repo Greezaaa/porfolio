@@ -1,0 +1,71 @@
+@import "../../assets/scss/variables.scss";
+
+.header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 5fr;
+    padding-bottom: 30px;
+
+    &>.logo {
+        justify-content: flex-start;
+        padding: $--1fr-padding calc($--1fr-padding*2);
+
+        &>svg {
+            position: absolute;
+            top: $--1fr-padding;
+        }
+    }
+
+    &>.social {
+        @include flex_row_cente_center;
+        position: relative;
+        align-items: flex-start;
+        padding: $--1fr-padding;
+
+        &::before {
+            --size: 0;
+            content: '';
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--size);
+            height: var(--size);
+            background: radial-gradient(circle closest-side, pink, transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.2s ease, height 0.2s ease;
+        }
+        &:hover::before {
+            --size: 20px;
+        }
+    }
+
+    &>.navigation {
+        @include flex_row_end_start;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-right: calc($--1fr-padding * 2);
+        gap: 30px;
+    }
+}
+
+.link {
+    color:$--text-color;
+    text-transform: none;
+    text-decoration: none;
+    @include transition300;
+    &::before {
+        content: "_";
+        color: $--white-accent;
+    }
+}
+.link:hover {
+    color: $--accentColor;
+}
+
+.active {
+    color: $--white-accent;
+    &::before {
+        content: "_";
+        color: $--accentColor;
+    }
+}

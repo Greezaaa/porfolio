@@ -1,0 +1,62 @@
+$--backgroun-color: #191919;
+$--text-color: #eeeeee;
+$--white-accent: lighten($--text-color, 20%);
+$--1fr-padding: 10px;
+$--accentColor: #ca2f00;
+
+// lighten() 
+// darken() 
+
+/* Track */
+
+
+
+@mixin flex_row_cente_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: $--1fr-padding;
+}
+@mixin flex_row_end_start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: $--1fr-padding;
+}
+
+@mixin border_bottom {
+    border-bottom: 1px solid $--white-accent;
+}
+@mixin border_left {
+    border-left: 1px solid $--white-accent;
+}
+@mixin border_top {
+    border-top: 1px solid $--white-accent;
+}
+@mixin border_right {
+    border-right: 1px solid $--white-accent;
+}
+@mixin border {
+    border: 1px solid $--white-accent;
+}
+
+@mixin transition300 {
+    transition: all 300ms ease;
+}
+
+@mixin blink_animation {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+::selection {
+    color: $--accentColor;
+    background: $--backgroun-color;
+  }

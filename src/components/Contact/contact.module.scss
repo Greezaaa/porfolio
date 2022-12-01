@@ -1,0 +1,59 @@
+@import "../../assets/scss/variables.scss";
+
+
+.wrapper {
+    width: min(100% - calc(4 * $--1fr-padding), 1024px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 6fr 2fr;
+    gap: 100px;
+    align-items: end;
+    @media (500px > width) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .content {
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h3 {
+                font-size: 36px;
+                text-align: right;
+                color: $--accentColor;
+            }
+            h4 {
+                text-align: right;
+                font-size: 30px;
+                margin-bottom: .6rem;
+            }
+            
+        }
+        .links_wrapper {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 20px;
+            a {
+                color: $--accentColor;
+                text-align: left;
+            }
+            &>.social {
+                display: flex;
+                flex-direction: row;
+                gap: 10px
+            }
+        }
+    }
+    // .form_wrapper {
+
+    // }
+}
+.npm {
+    color: $--accentColor;
+    text-transform: lowercase;
+    font-size: 50%;
+}

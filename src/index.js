@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.module.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import './assets/Font/NAMU-Pro.woff';
+import './assets/Font/OTTOATTACTYPE.woff2'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
