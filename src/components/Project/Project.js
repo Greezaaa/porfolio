@@ -11,6 +11,12 @@ const Project = ({project}) => {
                                 <img src={`/media/${project.imgUrl.gif}`} width={600} alt="" />
                             </div>
                             <p className={style.desc}>{project.desc}</p>
+                                <div className={style.line}></div>
+                            <div className={style.links}>
+                                <a href={project.url.git} target="_blank" > _checkcode</a>
+                                <span></span>
+                                <a href={project.url.live} target="_blank" > _live</a>
+                            </div>
                         </div>
     )
 }

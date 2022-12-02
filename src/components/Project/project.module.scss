@@ -9,7 +9,21 @@
         height: 90vh;
         scroll-behavior: smooth;
        }
-
+       &>.line {
+        width: 60%;
+        margin-inline: auto;
+        height: 2px;
+        background-color: $--accentColor;
+        margin: 1rem 0
+       }
+       &>.links {
+        margin-inline: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+       }
     &>p.desc {
         white-space: pre-line;
     }
@@ -30,6 +44,7 @@
             @include transition300;
             z-index: 1;
             transform-origin: top;
+            border-radius: 5px;
             @media (500px > width) { 
                 width: min(100%, 400px - 10px);
                }

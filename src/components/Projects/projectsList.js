@@ -12,8 +12,8 @@ export const projectList =
             },
             url:
             {
-                live: "https://greezaaa.es/projects/recetas_m1/",
-                git: "https://github.com/Greezaaa/recipes-mI",
+                live: "https://ekana.es",
+                git: "https://github.com/Greezaaa/ekana-wordpress-theme",
             }
         },
         {
@@ -43,8 +43,8 @@ export const projectList =
             },
             url:
             {
-                live: "https://greezaaa.es/projects/recetas_m1/",
-                git: "https://github.com/Greezaaa/recipes-mI",
+                live: "https://greezaaa.es/projects/js_black_jack/",
+                git: "https://github.com/Greezaaa/BlackJackGame",
             }
         },
     ]
