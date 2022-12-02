@@ -1,36 +1,47 @@
 @import "../../assets/scss/variables.scss";
 
 .form {
-    z-index: 999;
-& > span {
-display: block;    
-text-align: right;
-}
+    z-index: 99;
 
-.inputWrapper {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    padding: 1rem 0; 
-    label {
-        color: $--accentColor;
-        font-size: .7rem;
-        opacity: 1;
+    &>span {
+        display: block;
+        text-align: right;
     }
 
-    input, input:focus-visible, textarea {
-        padding: 10px 10px;
-        outline: none;
-        background-color: transparent;
-        border: none;
-        color: $--text-color;
-        @include border-bottom;
+    .inputWrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        padding: 1rem 0;
+
+        label {
+            color: $--accentColor;
+            font-size: .7rem;
+            opacity: 1;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input,
+        input:focus-visible,
+        textarea {
+            padding: 10px 10px;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            color: $--text-color;
+            @include border-bottom;
+        }
+
+        input:valid,
+        textarea:valid {
+            border-color: hsla(120, 76%, 50%, 0.295);
+        }
     }
-    input:valid, textarea:valid {
-        border-color: hsla(120, 76%, 50%, 0.295);
-      }
-    }
+
     button {
         display: block;
         border: none;

@@ -45,9 +45,8 @@ const Contact = () => {
                         data-aos-easing="ease-in-sine"
                     >greezaaa@gmail.com</a>
                     <div className={style.social}>
-                        <GitHub/> 
-                        <LinkedIn/>
-
+                    <a href="https://github.com/greezaaa" target="_blank" ><GitHub /></a>
+                <a href="https://www.linkedin.com/in/yevheniy-jeka-alekseyev-66a69119b/" target="_blank" ><LinkedIn /></a>
                     </div>
                 </div>
 

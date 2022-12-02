@@ -47,17 +47,10 @@ const Home = () => {
                 <ul>
                     <li><Link
                         to="./about"
-                        data-aos="fade-left"
-                        data-aos-offset="300"
-                        data-aos-duration="1000"
-                        data-aos-easing="ease"
+                      
                     ><Arrow stroke={"#ca2f00"} />about me</Link></li>
                     <li><span>| |</span></li>
                     <li><Link to="./works"
-                        data-aos="fade-right"
-                        data-aos-offset="300"
-                        data-aos-duration="1200"
-                        data-aos-easing="ease"
                     >some of my works<Arrow stroke={"#ca2f00"} /></Link>                    </li>
                 </ul>
             </div>
