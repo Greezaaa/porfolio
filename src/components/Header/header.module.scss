@@ -11,6 +11,9 @@
     }
 
     &>.hamburger {
+        background-color: transparent;
+        border: none;
+        outline: none;
         position: absolute;
         top: $--1fr-padding * 2;
         right: $--1fr-padding * 2;

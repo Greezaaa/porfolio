@@ -30,9 +30,9 @@ const Header = () => {
 
     return (
         <header className={style.header}>
-            <div className={`${style.hamburger} ${ IsOpen ? style.open : ""}`} onClick={()=>openMenu()} ><span></span><span></span><span></span></div>
+            <button className={`${style.hamburger} ${ IsOpen ? style.open : ""}`} onClick={()=>openMenu()} ><span></span><span></span><span></span></button>
             <div className={style.logo}>
-                <Logo />
+                <a href="/" target="_self"><Logo /></a>
             </div>
             <div className={`${style.social} ${ IsOpen ? style.open : ""}`}>
                 <a href="mailto:greezaaa@gmail.com" target="_blank" ><EmailIcon /></a>

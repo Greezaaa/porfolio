@@ -1,4 +1,28 @@
+@import "../../assets/scss/variables.scss";
 .about_wrapper {
-    width: min(1024px, 100% - 20px);
+    width: min(800px, 100% - 20px);
     margin-inline: auto;
+
+    .highlight {
+        color: $--accentColor;
+    }
+    &> h3{
+        font-size: 36px;
+        margin-bottom: 1rem;
+        &>span.highlight {
+            color: $--accentColor;
+        }
+    }
+    &>p {
+        margin-bottom: 1rem;
+        font-size: 24px;
+
+        &::first-letter{
+            padding-left: 5px;
+            color: $--accentColor;
+            &>span.highlight {
+                color: $--accentColor;
+            }
+        }
+    }
 }
