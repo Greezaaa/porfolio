@@ -11,14 +11,21 @@ import EmailIcon from '../Icons/EmailIcon';
 
 
 const Header = () => {
+
+    const pathname = window.location.pathname //returns the current url minus the domain name
+
     const [IsOpen, setIsOpen] = useState(false)
     const openMenu = () => {
-        setIsOpen(!IsOpen)
-        
+        setIsOpen(!IsOpen) 
     }
+
+
+
     useEffect(()=> {
         Aos.init({duration: 2000})
     },[])
+
+
 
 
     return (
@@ -27,40 +34,32 @@ const Header = () => {
             <div className={style.logo}>
                 <Logo />
             </div>
-            <div className={style.social}>
+            <div className={`${style.social} ${ IsOpen ? style.open : ""}`}>
                 <EmailIcon />
                 <GitHub />
                 <LinkedIn />
             </div>
-            <div className={style.navigation} >
+            <div className={`${style.navigation} ${ IsOpen ? style.open : ""}`} >
                 <Link
                     to="/"
-                    className={`${style.link} ${style.active}`}
-                    data-aos="fade-down"
-                    data-aos-offset="300"
-                    data-aos-duration="1000"
-                    data-aos-easing="ease">home</Link>
+                    className={`${style.link} ${(pathname == "/") ? style.active : ""}`}
+                    onClick={()=>openMenu()}
+                    >home</Link>
                 <Link
                     to="/works"
-                    className={`${style.link} `}
-                    data-aos="fade-down"
-                    data-aos-offset="500"
-                    data-aos-duration="200"
-                    data-aos-easing="ease-in-sine">works</Link>
+                    className={`${style.link} ${(pathname == "/works") ? style.active : ""}`}
+                    onClick={()=>openMenu()}
+                    >works</Link>
                 <Link
                     to="/about"
-                    className={`${style.link} `}
-                    data-aos="fade-down"
-                    data-aos-offset="300"
-                    data-aos-duration="300"
-                    data-aos-easing="ease-in-sine">about</Link>
+                    className={`${style.link} ${(pathname == "/about") ? style.active : ""}`}
+                    onClick={()=>openMenu()}
+                    >about</Link>
                 <Link
                     to="/contact"
-                    className={`${style.link} `}
-                    data-aos="fade-down"
-                    data-aos-offset="300"
-                    data-aos-duration="700"
-                    data-aos-easing="ease-in-sine">get in touch</Link>
+                    className={`${style.link} ${(pathname == "/contact") ? style.active : ""}`}
+                    onClick={()=>openMenu()}
+                    >get in touch</Link>
             </div>
         </header>
     )

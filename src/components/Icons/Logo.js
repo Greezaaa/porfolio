@@ -12,8 +12,8 @@ const Logo = (props) => {
             className={`${style.icon} ${style.ya_logo_icon}`}
             data-name="yaLogo"
             stroke={stroke}
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             strokeWidth={4}
             fill="transparent"
             xmlns="http://www.w3.org/2000/svg"

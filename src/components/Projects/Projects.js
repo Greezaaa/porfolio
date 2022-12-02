@@ -3,7 +3,6 @@ import { projectList } from './projectsList.js'
 import Project from '../Project/Project';
 const Projects = () => {
 
-    console.log(projectList);
     return (
         <div className={style.projects_wrapper}>
             {projectList.map(

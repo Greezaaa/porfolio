@@ -5,9 +5,11 @@
     display: grid;
     grid-template-columns: 2fr 2fr 5fr;
     padding-bottom: 30px;
+
     @media (500px < width < 768px) {
-        grid-template-columns: 2fr  5fr;
+        grid-template-columns: 2fr 5fr;
     }
+
     &>.hamburger {
         position: absolute;
         top: $--1fr-padding * 2;
@@ -18,10 +20,13 @@
         flex-direction: column;
         align-items: flex-end;
         gap: 4px;
+        z-index: 999999;
         cursor: pointer;
+
         @media (500px < width) {
             display: none;
         }
+
         &>span {
             height: 3px;
             width: 3px;
@@ -47,7 +52,7 @@
 
         &.open {
             &>span {
-                background-color: $--accentColor;
+                background-color: $--text-color;
 
                 &:nth-child(1) {
                     width: 100%;
@@ -74,6 +79,7 @@
 
         justify-content: flex-start;
         padding: $--1fr-padding calc($--1fr-padding*2);
+        z-index: 999999;
         &>svg {
             position: absolute;
             top: $--1fr-padding;
@@ -86,8 +92,35 @@
         position: relative;
         align-items: flex-start;
         padding: $--1fr-padding;
-        @media ( width < 768px) {
+        @media (768px > width) {
             display: none;
+        }
+        @media (500px > width) {
+            position: absolute;
+            padding:  2rem;
+            opacity: 1;
+            top: -150%;
+            left: 50%;
+            @include transition300;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            height: 10vH;
+            width: 60%;
+            z-index: 9999;
+            background-color: $--accentColor;
+            translate: -50% 0%;
+            &>a {
+                margin-inline: auto;
+                &:hover {
+                    color: $--backgroun-color;
+                }
+            }
+            &.open {
+                top: 0%;
+                
+            }
         }
     }
 
@@ -98,33 +131,62 @@
         align-items: flex-start;
         padding-right: calc($--1fr-padding * 2);
         gap: 30px;
-        @media (500px > width) {
-            display: none;
+        @include transition300;
+
+        .link {
+            color: $--text-color;
+            text-transform: none;
+            text-decoration: none;
+            @include transition300;
+
+            &::before {
+                content: "_ ";
+                color: $--white-accent;
+                @include transition300
+            }
+
+            &:hover {
+                color: $--accentColor;
+            }
+
+            &.active {
+                color: $--white-accent;
+                opacity: 1 !important;
+                transform: translate3d(0, 0, 0) !important;
+
+                &::before {
+                    content: "> ";
+                    color: $--accentColor;
+                }
+            }
         }
-    }
-}
 
-.link {
-    color: $--text-color;
-    text-transform: none;
-    text-decoration: none;
-    @include transition300;
-
-    &::before {
-        content: "_";
-        color: $--white-accent;
-    }
-}
-
-.link:hover {
-    color: $--accentColor;
-}
-
-.active {
-    color: $--white-accent;
-
-    &::before {
-        content: "_";
-        color: $--accentColor;
+        @media (500px > width) {
+            position: absolute;
+            padding:  0 2rem;
+            opacity: 1;
+            top: -150%;
+            left: 50%;
+            @include transition300;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            height: 40vH;
+            width: 60%;
+            z-index: 999;
+            background-color: $--accentColor;
+            translate: -50% 0%;
+            
+            &.open {
+                top: 0%;
+                &>a {
+                    margin-inline: auto;
+                    &:hover {
+                        color: $--backgroun-color;
+                    }
+                }
+            }
+        }
     }
 }

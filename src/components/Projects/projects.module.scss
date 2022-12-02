@@ -8,6 +8,18 @@
     scroll-snap-type: y mandatory;
     max-height: 80%;
     margin-block: auto;
+    @include transition300;
+    animation: loaded 3000ms ease;
+    animation-iteration-count: 1;
+
+    @keyframes loaded {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
     @media (500px > width) { 
         max-height: 90%;
         padding-top: 100px;
