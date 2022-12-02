@@ -35,9 +35,9 @@ const Header = () => {
                 <Logo />
             </div>
             <div className={`${style.social} ${ IsOpen ? style.open : ""}`}>
-                <EmailIcon />
-                <GitHub />
-                <LinkedIn />
+                <a href="mailto:greezaaa@gmail.com" target="_blank" ><EmailIcon /></a>
+                <a href="https://github.com/greezaaa" target="_blank" ><GitHub /></a>
+                <a href="https://www.linkedin.com/in/yevheniy-jeka-alekseyev-66a69119b/" target="_blank" ><LinkedIn /></a>
             </div>
             <div className={`${style.navigation} ${ IsOpen ? style.open : ""}`} >
                 <Link
