@@ -23,6 +23,29 @@
         justify-content: flex-start;
         align-items: center;
         gap: 10px;
+
+        &>a {
+            position: relative;
+            &:after {
+                position: absolute;
+                height: 0px;
+                width: 100%;
+                bottom: -20px;
+                left: 0;
+                background-color: $--accentColor;
+                content: "";   
+                opacity: 0;
+                @include transition300
+            }
+        }
+        &>a:hover {
+            &:after {
+                opacity: 1;
+                height: 2px;
+                bottom: -5px;
+            }
+            
+        }
        }
     &>p.desc {
         white-space: pre-line;

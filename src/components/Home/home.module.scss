@@ -6,7 +6,9 @@
     grid-template-rows: 4fr 3fr;
     width: min(100% - 20px, 1024px);
     margin-inline: auto;
-
+    @media (500px > width) {
+        grid-template-rows: 7fr 2fr;
+    }
     .blinks {
 
         @include blink_animation;
@@ -28,12 +30,18 @@
         justify-content: center;
 
         @media (500px > width) {
-            grid-template-columns: 10fr 1fr;
+            grid-template-columns: 10fr;
+            align-items: center;
+            gap: 0;
         }
 
         .hero_main {
             align-self: end;
             justify-self: end;
+            @media (500px > width) {
+                align-self: center;
+                justify-self: center;
+            } 
 
             h2 {
                 font-size: 40px;

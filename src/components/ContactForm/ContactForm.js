@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import style from "./contactForm.module.scss"
 
 
@@ -29,21 +29,23 @@ const ContactForm = () => {
   return (
     <form className={style.form} onSubmit={handleSubmit}>
 
-      
+
       <div className={style.inputWrapper}>
         <label htmlFor="name">_name:</label>
-        <input type="text" id="name" required  pattern="\S+.*" />
+        <input type="text" id="name" required pattern="\S+.*" />
       </div>
-      <div  className={style.inputWrapper}>
+      <div className={style.inputWrapper}>
         <label htmlFor="email">_email:</label>
         <input type="email" id="email" required pattern="\S+.*" />
       </div>
-      <div  className={style.inputWrapper}>
+      <div className={style.inputWrapper}>
         <label htmlFor="message">_message:</label>
         <textarea id="message" required />
       </div>
-      <span> your email won't be shared with anyone</span>
-      <button type="submit">{status}</button>
+      {/* <span> your email won't be shared with anyone</span> */}
+
+      <span>sorry, temporarily out of service</span>
+      <button type="submit" disabled={false}>{status}</button>
 
     </form>
   );

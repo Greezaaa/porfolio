@@ -16,25 +16,21 @@ const Home = () => {
                 <div className={style.hero_main}>
                     <h3
                         data-aos="fade-left"
-                        data-aos-offset="300"
                         data-aos-duration="300"
                         data-aos-easing="ease-in-sine"
                     ><span className={style.npm}> &gt;__</span> Hello world  👋</h3>
                     <h2
                         data-aos="fade-right"
-                        data-aos-offset="300"
                         data-aos-duration="400"
                         data-aos-easing="ease-in-sine"
                     ><span>I'm <span className={style.hightlight}>Yevheniy Alekseyev</span>,</span></h2>
                     <h2
                         data-aos="zoom-out"
-                        data-aos-offset="300"
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-sine"
                     ><span >I'm <span className={style.hightlight}>Full-stack</span> web developer</span></h2>
                     <h3
                         data-aos="fade-left"
-                        data-aos-offset="300"
                         data-aos-duration="300"
                         data-aos-easing="ease-in-sine"
                     >but you can call me "Jeka" <span className={style.blinks}>|</span></h3>
